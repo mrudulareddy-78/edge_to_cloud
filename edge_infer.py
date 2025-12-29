@@ -45,6 +45,10 @@ for idx, image_path in enumerate(image_paths, start=1):
     predicted_class = int(np.argmax(pred))
     confidence = float(np.max(pred))
 
-    print("Predicted Class ID:", predicted_class)
-    print("Confidence:", round(confidence, 3))
-    print()
+pred = model.predict(img)
+class_id = int(np.argmax(pred))
+confidence = float(np.max(pred))
+
+print("✅ EDGE INFERENCE RESULT")
+print("Class ID:", class_id)
+print("Confidence:", round(confidence, 3))
