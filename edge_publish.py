@@ -9,10 +9,11 @@ payload = {
     "device_id": "edge-device-01",
     "defect": "Scratch",
     "confidence": 0.94,
+    "image_name": "sample.jpg",
     "timestamp": time.time()
 }
 
 client.publish("factory/defects", json.dumps(payload))
-print("Edge sent defect data")
+print("📤 EDGE published defect metadata")
 
 client.disconnect()
